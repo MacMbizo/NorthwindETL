@@ -11,10 +11,24 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{9E254753-EF4B-4478-9638-BDE496CB538F}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{360C75BD-6E21-44D0-A52D-7048CC408B3F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-DI4DCC2.NORTHWIND]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{06F8C869-C69A-45E9-BD6B-DC665BD2E64F}"
+      DTS:ObjectName="DESKTOP-DI4DCC2.NORTHWIND">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-DI4DCC2;Initial Catalog=NORTHWIND;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{06F8C869-C69A-45E9-BD6B-DC665BD2E64F}DESKTOP-DI4DCC2.NORTHWIND;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -29,7 +43,9 @@
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{06F8C869-C69A-45E9-BD6B-DC665BD2E64F}"
+          SQLTask:SqlStatementSource="[stage].[usp_Upsert]'categories'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
