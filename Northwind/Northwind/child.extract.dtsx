@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{8831978A-FA5F-417D-BD8E-3A2D337EA2A9}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{7BB160CF-4673-414A-B658-99DFFC69DA60}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,309 +39,465 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{944263DA-15D6-4BCE-9F53-F4CD954E8A7F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varcategoryID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C54B9755-9D8B-4980-84F0-5A2680949631}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varcustomerID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6EC6AF8A-EDE5-41A2-BDC7-ECA2F64E11EC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varemployeeID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3B9A53E4-FD19-41AD-8271-385155298E77}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varorderdetailID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5ED4B2B4-A298-4DCC-B568-40196E8BCBE4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varorderID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3B7071BE-612D-4993-9613-3DAD6C01F6EA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varproductID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3B4CD15D-8739-4C85-A019-E9C54AC3C53D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varshipperID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E65D8986-C6D8-4E69-84CC-436D1CFE9FA2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varsupplierID">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\extract categories src"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{BA713BDD-753A-48B9-A941-F434B0CDDF1C}"
-      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:refId="Package\SEQ categories"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8515B413-3FD6-40B5-8536-2D16AAA94366}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="extract categories src">
+      DTS:ObjectName="SEQ categories">
       <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\extract categories src\categories src"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
-              name="categories src"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement used by the component to extract data."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT `categories`.`CategoryID`,
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ categories\SEQ extract categories"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{C6321C05-CA3E-49BF-AC89-0DE93589A565}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SEQ extract categories">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\SEQ categories\SEQ extract categories\Execute SQL Task"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{793D2CA0-10BB-4F1C-8EA3-6693EC464D4B}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Execute SQL Task"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{904BF20F-9259-40E7-AF87-2B2D8AB1EAF8}"
+                  SQLTask:SqlStatementSource="SELECT max(CategoryID) as categoryID&#xA;  FROM [NORTHWIND].[stage].[categories]"
+                  SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+                  <SQLTask:ResultBinding
+                    SQLTask:ResultName="categoryID"
+                    SQLTask:DtsVariableName="User::varcategoryID" />
+                </SQLTask:SqlTaskData>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\SEQ categories\SEQ extract categories\extract categories src"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{BA713BDD-753A-48B9-A941-F434B0CDDF1C}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="extract categories src">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src"
+                      componentClassID="Microsoft.ManagedComponentHost"
+                      contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                      name="categories src"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the SQL statement used by the component to extract data."
+                          expressionType="Notify"
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT `categories`.`CategoryID`,
     `categories`.`CategoryName`,
     `categories`.`Description`
 FROM `northwind`.`categories`;</property>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="The Source database table name."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specify the mode to retrieve external column information"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\extract categories src\categories src.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.Northwind.root]"
-                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.Northwind.root]"
-                  description="Managed connection manager"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output]"
-                  name="ADO NET Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryID]"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]"
-                      name="CategoryID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
-                      length="25"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]"
-                      name="CategoryName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[Description]"
-                      length="255"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]"
-                      name="Description"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryID]"
-                      dataType="i4"
-                      name="CategoryID" />
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
-                      dataType="wstr"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[Description]"
-                      dataType="wstr"
-                      length="255"
-                      name="Description" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output]"
-                  isErrorOut="true"
-                  name="ADO NET Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryID]"
-                      dataType="i4"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryID]"
-                      name="CategoryID" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
-                      dataType="wstr"
-                      length="25"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
-                      name="CategoryName" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[Description]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[Description]"
-                      name="Description" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\extract categories src\DST categories"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="DST categories"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[extract].[categories]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\extract categories src\DST categories.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-DI4DCC2.NORTHWIND]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-DI4DCC2.NORTHWIND]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[CategoryID]"
-                      cachedDataType="i4"
-                      cachedName="CategoryID"
-                      externalMetadataColumnId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]" />
-                    <inputColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[CategoryName]"
-                      cachedDataType="wstr"
-                      cachedLength="25"
-                      cachedName="CategoryName"
-                      externalMetadataColumnId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]" />
-                    <inputColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[Description]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Description"
-                      externalMetadataColumnId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      lineageId="Package\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
-                      dataType="i4"
-                      name="CategoryID" />
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
-                      dataType="wstr"
-                      length="25"
-                      name="CategoryName" />
-                    <externalMetadataColumn
-                      refId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      dataType="wstr"
-                      length="255"
-                      name="Description" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\extract categories src\DST categories.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\extract categories src.Paths[ADO NET Source Output]"
-              endId="Package\extract categories src\DST categories.Inputs[OLE DB Destination Input]"
-              name="ADO NET Source Output"
-              startId="Package\extract categories src\categories src.Outputs[ADO NET Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">30</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                          name="AllowImplicitStringConversion">true</property>
+                        <property
+                          dataType="System.String"
+                          description="The Source database table name."
+                          expressionType="Notify"
+                          name="TableOrViewName"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specify the mode to retrieve external column information"
+                          name="AccessMode"
+                          typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                        <property
+                          dataType="System.String"
+                          name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Connections[IDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[127.0.0.1.Northwind.root]"
+                          connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.Northwind.root]"
+                          description="Managed connection manager"
+                          name="IDbConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output]"
+                          name="ADO NET Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryID]"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]"
+                              name="CategoryID"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
+                              length="25"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]"
+                              name="CategoryName"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                              length="255"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]"
+                              name="Description"
+                              truncationRowDisposition="FailComponent" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryID]"
+                              dataType="i4"
+                              name="CategoryID" />
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
+                              dataType="wstr"
+                              length="25"
+                              name="CategoryName" />
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                              dataType="wstr"
+                              length="255"
+                              name="Description" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output]"
+                          isErrorOut="true"
+                          name="ADO NET Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryID]"
+                              dataType="i4"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryID]"
+                              name="CategoryID" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
+                              dataType="wstr"
+                              length="25"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
+                              name="CategoryName" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[Description]"
+                              dataType="wstr"
+                              length="255"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[Description]"
+                              name="Description" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="DST categories"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[extract].[categories]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[DESKTOP-DI4DCC2.NORTHWIND]"
+                          connectionManagerRefId="Package.ConnectionManagers[DESKTOP-DI4DCC2.NORTHWIND]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                              cachedDataType="i4"
+                              cachedName="CategoryID"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryID]" />
+                            <inputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[CategoryName]"
+                              cachedDataType="wstr"
+                              cachedLength="25"
+                              cachedName="CategoryName"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[CategoryName]" />
+                            <inputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].Columns[Description]"
+                              cachedDataType="wstr"
+                              cachedLength="255"
+                              cachedName="Description"
+                              externalMetadataColumnId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output].Columns[Description]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                              dataType="i4"
+                              name="CategoryID" />
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
+                              dataType="wstr"
+                              length="25"
+                              name="CategoryName" />
+                            <externalMetadataColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                              dataType="wstr"
+                              length="255"
+                              name="Description" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\SEQ categories\SEQ extract categories\extract categories src.Paths[ADO NET Source Output]"
+                      endId="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories.Inputs[OLE DB Destination Input]"
+                      name="ADO NET Source Output"
+                      startId="Package\SEQ categories\SEQ extract categories\extract categories src\categories src.Outputs[ADO NET Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\SEQ categories\SEQ extract categories.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{912FE2D8-CDD6-45A4-8B35-4B1115806E2B}"
+              DTS:From="Package\SEQ categories\SEQ extract categories\Execute SQL Task"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\SEQ categories\SEQ extract categories\extract categories src" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ categories\truncate categories src"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C39D1D51-D7D0-4EE4-AF59-67256A724286}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate categories src"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{904BF20F-9259-40E7-AF87-2B2D8AB1EAF8}"
+              SQLTask:SqlStatementSource="truncate table [NORTHWIND].[extract].[categories]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ categories.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{E72AC677-96D4-44ED-AB1B-D8832B8E9CFB}"
+          DTS:From="Package\SEQ categories\truncate categories src"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SEQ categories\SEQ extract categories" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -355,29 +511,107 @@ FROM `northwind`.`categories`;</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="183,42"
-          Id="Package\extract categories src"
-          TopLeft="5.5,5.5" />
+          Id="Package\SEQ categories\SEQ extract categories\extract categories src"
+          TopLeft="5.5,82" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\SEQ categories\SEQ extract categories\Execute SQL Task"
+          TopLeft="12,5.5" />
+        <EdgeLayout
+          Id="Package\SEQ categories\SEQ extract categories.PrecedenceConstraints[Constraint]"
+          TopLeft="97,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.5"
+              Start="0,0"
+              End="0,27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="215,133"
+          Size="215,176"
+          Id="Package\SEQ categories\SEQ extract categories"
+          TopLeft="5.5,90.5" />
+        <EdgeLayout
+          Id="Package\SEQ categories.PrecedenceConstraints[Constraint]"
+          TopLeft="123,43">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10,47.5"
+              Start="0,0"
+              End="-10,40">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.75"
+                    Point2="0,23.75"
+                    Point3="-4,23.75" />
+                  <mssgle:LineSegment
+                    End="-6,23.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6,23.75"
+                    Point2="-10,23.75"
+                    Point3="-10,27.75" />
+                  <mssgle:LineSegment
+                    End="-10,40" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SEQ categories\truncate categories src"
+          TopLeft="28,1" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="226,277"
+          Size="226,320"
+          Id="Package\SEQ categories"
+          TopLeft="60.5,48.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\extract categories src">
+    design-time-name="Package\SEQ categories\SEQ extract categories\extract categories src">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="147,42"
-          Id="Package\extract categories src\categories src"
+          Id="Package\SEQ categories\SEQ extract categories\extract categories src\categories src"
           TopLeft="334,40" />
         <NodeLayout
           Size="155,42"
-          Id="Package\extract categories src\DST categories"
+          Id="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories"
           TopLeft="344,168" />
         <EdgeLayout
-          Id="Package\extract categories src.Paths[ADO NET Source Output]"
+          Id="Package\SEQ categories\SEQ extract categories\extract categories src.Paths[ADO NET Source Output]"
           TopLeft="407.5,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -414,7 +648,7 @@ FROM `northwind`.`categories`;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\extract categories src\categories src">
+    design-time-name="Package\SEQ categories\SEQ extract categories\extract categories src\categories src">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -422,7 +656,7 @@ FROM `northwind`.`categories`;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\extract categories src\DST categories">
+    design-time-name="Package\SEQ categories\SEQ extract categories\extract categories src\DST categories">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
