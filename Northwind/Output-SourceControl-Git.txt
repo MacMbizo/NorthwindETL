@@ -1,0 +1,37 @@
+﻿Opening repositories:
+C:\Users\MacDonald Mbizo\Source\Repos\MacMbizo\NorthwindETL
+An existing Git repository was found in C:\Users\MacDonald Mbizo\source\repos\MacMbizo\NorthwindETL.
+Pushing master
+Branch master does not exist. Commit changes locally and then push.
+Commit 2aae2ccf created locally in repository C:\Users\MacDonald Mbizo\Source\Repos\MacMbizo\NorthwindETL
+Pushing master
+Error encountered while pushing branch to the remote repository: Git failed with a fatal error.
+unable to access 'https://github.com/MacMbizo/NorthwindETL/': Could not resolve host: github.com
+Pushing to https://github.com/MacMbizo/NorthwindETL
+
+Failed to push the branch to the remote repository. See the Output window for more details.
+Pushing master
+Error encountered while pushing branch to the remote repository: Git failed with a fatal error.
+unable to access 'https://github.com/MacMbizo/NorthwindETL/': Could not resolve host: github.com
+Pushing to https://github.com/MacMbizo/NorthwindETL
+
+Pushing master
+Commit d04ffa49 created locally in repository C:\Users\MacDonald Mbizo\Source\Repos\MacMbizo\NorthwindETL
+Pushing master
+Error encountered while pushing to the remote repository: Git failed with a fatal error.
+unable to access 'https://github.com/MacMbizo/NorthwindETL/': Could not resolve host: github.com
+Pushing to https://github.com/MacMbizo/NorthwindETL
+
+Pushing master
+Error encountered while pushing to the remote repository: Git failed with a fatal error.
+unable to access 'https://github.com/MacMbizo/NorthwindETL/': Could not resolve host: github.com
+Pushing to https://github.com/MacMbizo/NorthwindETL
+
+Pushing master
+Error encountered while pushing to the remote repository: Git failed with a fatal error.
+HttpRequestException encountered.
+   An error occurred while sending the request.
+cannot spawn /c/program files (x86)/microsoft visual studio/2019/enterprise/common7/ide/commonextensions/microsoft/teamfoundation/team explorer/Git/mingw32/libexec/git-core/git-askpass.exe: No such file or directory
+could not read Username for 'https://github.com': terminal prompts disabled
+Pushing to https://github.com/MacMbizo/NorthwindETL
+

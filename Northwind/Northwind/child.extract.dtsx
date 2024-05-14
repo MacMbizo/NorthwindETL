@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{7BB160CF-4673-414A-B658-99DFFC69DA60}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{D0F26D80-948F-49EB-9E65-C0758F5941FC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="ADO.NET:MySql.Data.MySqlClient.MySqlConnection, MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d"
       DTS:DTSID="{FBEF0B0C-7082-45E3-A91B-DFE9635E756A}"
       DTS:ObjectName="127.0.0.1.Northwind.root">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::_127001NorthwindRoot_ConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="server=127.0.0.1;user id=root;database=Northwind;" />
@@ -31,6 +33,8 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{904BF20F-9259-40E7-AF87-2B2D8AB1EAF8}"
       DTS:ObjectName="DESKTOP-DI4DCC2.NORTHWIND">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::DESKTOPDI4DCC2NORTHWIND_ConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -513,13 +517,13 @@ FROM `northwind`.`categories`;</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183,42"
-          Id="Package\SEQ categories\SEQ extract categories\extract categories src"
-          TopLeft="5.5,82" />
-        <NodeLayout
           Size="170,42"
           Id="Package\SEQ categories\SEQ extract categories\Execute SQL Task"
           TopLeft="12,5.5" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\SEQ categories\SEQ extract categories\extract categories src"
+          TopLeft="5.5,82" />
         <EdgeLayout
           Id="Package\SEQ categories\SEQ extract categories.PrecedenceConstraints[Constraint]"
           TopLeft="97,47.5">
@@ -549,6 +553,10 @@ FROM `northwind`.`categories`;</property>
           Size="215,176"
           Id="Package\SEQ categories\SEQ extract categories"
           TopLeft="5.5,90.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SEQ categories\truncate categories src"
+          TopLeft="28,1" />
         <EdgeLayout
           Id="Package\SEQ categories.PrecedenceConstraints[Constraint]"
           TopLeft="123,43">
@@ -583,10 +591,6 @@ FROM `northwind`.`categories`;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\SEQ categories\truncate categories src"
-          TopLeft="28,1" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
