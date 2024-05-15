@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{360C75BD-6E21-44D0-A52D-7048CC408B3F}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{3FBC0E3B-7F82-4622-816D-9FFE47E0BB77}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -48,6 +48,23 @@
           SQLTask:SqlStatementSource="[stage].[usp_Upsert]'categories'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\stage customers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{543DF01E-711A-43D1-9E1E-87B1414BC910}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="stage customers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{06F8C869-C69A-45E9-BD6B-DC665BD2E64F}"
+          SQLTask:SqlStatementSource="[stage].[usp_Upsert]'customers'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -65,6 +82,10 @@
           Size="160,42"
           Id="Package\stage categories"
           TopLeft="154,131" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\stage customers"
+          TopLeft="277,63" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
